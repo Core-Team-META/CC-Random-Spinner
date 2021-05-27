@@ -19,7 +19,6 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 -----------------------------
 
-
 SCREEN_GROUP:AttachToLocalView()
 SCREEN_GROUP.visibility = Visibility.FORCE_OFF
 UI_CONTAINER.visibility = Visibility.FORCE_OFF
@@ -54,8 +53,6 @@ function Activate()
         position = position + Vector3.RIGHT * spacing
         itemTotalSpacing = itemTotalSpacing + 1000
     end
-
-    SCREEN_GROUP.visibility = Visibility.FORCE_ON
 end
 
 function PickItemRandomly()
@@ -88,14 +85,15 @@ function InitializeLootCard(lootCard, item)
 
     gradient:SetColor(item.rarity.color)
     bar:SetColor(item.rarity.color)
+
+
     gamePortal:SetSmartProperty("Game ID", item.gamePortal)
     gamePortal:SetSmartProperty("Screenshot Index", item.screenshotIndex)
-
+  
     -- Store this position
     lootCard.clientUserData.startPosition = lootCard:GetPosition()
     lootCard.clientUserData.item = item
 end
-
 
 function Show()
     isEnabled = true
@@ -103,7 +101,7 @@ function Show()
     UI_CONTAINER.visibility = Visibility.INHERIT
     UI.SetCursorVisible(true)
     UI.SetCanCursorInteractWithUI(true)
-    Activate()
+    --Activate()
 end
 
 function Deactivate()
@@ -119,7 +117,7 @@ function Hide()
     UI_CONTAINER.visibility = Visibility.FORCE_OFF
     UI.SetCursorVisible(false)
     UI.SetCanCursorInteractWithUI(false)
-    Deactivate()
+    --Deactivate()
 end
 
 -- Wraps items based on the horizontal position
@@ -204,7 +202,6 @@ end
 
 SPIN_BUTTON.clickedEvent:Connect(SpinIt)
 
-
 LOCAL_PLAYER.bindingPressedEvent:Connect(
     function(player, binding)
         if binding == "ability_extra_24" then
@@ -216,3 +213,5 @@ LOCAL_PLAYER.bindingPressedEvent:Connect(
         end
     end
 )
+
+Activate()

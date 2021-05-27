@@ -110,7 +110,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "bp:Game ID"
-            String: "68ffd7/lootcardtest"
+            String: "4a5251/weapon-images"
           }
           Overrides {
             Name: "bp:Screenshot Index"

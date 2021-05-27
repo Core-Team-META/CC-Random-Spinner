@@ -58,11 +58,12 @@ Objects {
   }
   ParentId: 11239511154039978119
   ChildIds: 1657670027177508992
+  ChildIds: 9943238260619795141
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -99,72 +100,6 @@ Objects {
   }
 }
 Objects {
-  Id: 1657670027177508992
-  Name: "UI Image"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15967110898566582072
-  ChildIds: 9943238260619795141
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 5
-    Height: 200
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentHeight: true
-    Image {
-      Brush {
-      }
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 0.614
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 1657670027177508992
-    SubobjectId: 12589362523639500636
-    InstanceId: 17771080832798645400
-    TemplateId: 14767819289351633414
-  }
-}
-Objects {
   Id: 9943238260619795141
   Name: "UI Button"
   Transform {
@@ -178,7 +113,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1657670027177508992
+  ParentId: 15967110898566582072
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -191,6 +126,7 @@ Objects {
   Control {
     Width: 339
     Height: 91
+    UIX: 6.10351563e-05
     UIY: -132.854614
     RenderTransformPivot {
       Anchor {
@@ -259,6 +195,72 @@ Objects {
   InstanceHistory {
     SelfId: 9943238260619795141
     SubobjectId: 3479635567284540697
+    InstanceId: 17771080832798645400
+    TemplateId: 14767819289351633414
+  }
+}
+Objects {
+  Id: 1657670027177508992
+  Name: "UI Image"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15967110898566582072
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 97
+    Height: 72
+    UIY: 213.643646
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 8598989022167215120
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 0.614
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 1657670027177508992
+    SubobjectId: 12589362523639500636
     InstanceId: 17771080832798645400
     TemplateId: 14767819289351633414
   }
