@@ -14,7 +14,7 @@ if spinDuration < 1 then
     spinDuration = 1
     warn("Spin Duration must be great than 1")
 end
-
+local items = LootItemsDatabaseAPI.GetItems()
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 -----------------------------
@@ -37,10 +37,9 @@ local pivotStartPosition = PIVOT:GetPosition()
 local spinTargetPosition = 0
 local spinDistance = 50000
 local spinStartTime = 0
+local winningItem = nil
 
 function Activate()
-    local items = LootItemsDatabaseAPI.GetItems()
-
     local position = Vector3.ZERO
     itemTotalSpacing = 0
 
@@ -78,11 +77,16 @@ function PickItemRandomly()
 end
 
 function InitializeLootCard(lootCard, item)
+    if item.id ~= winningItem then
+        item = LootItemsDatabaseAPI.GetItemById(math.random(1, #items))
+    end
     local gamePortal = lootCard:GetCustomProperty("GamePortal"):WaitForObject()
     local gradient = lootCard:GetCustomProperty("Gradient"):WaitForObject()
     local bar = lootCard:GetCustomProperty("Bar"):WaitForObject()
     local border = lootCard:GetCustomProperty("Border"):WaitForObject()
+    local name = lootCard:GetCustomProperty("Name"):WaitForObject()
 
+    name.text = item.name
     gradient:SetColor(item.rarity.color)
     bar:SetColor(item.rarity.color)
 
@@ -106,7 +110,9 @@ end
 
 function Deactivate()
     for _, lootCard in ipairs(lootCards) do
-        lootCard:Destroy()
+        if Object.IsValid(lootCard) then
+            lootCard:Destroy()
+        end
     end
     lootCards = {}
 end
@@ -185,11 +191,12 @@ function OnNetworkObjectAdded(parentObject, childObject)
         itemId = childObject:GetCustomProperty("ItemID")
         Task.Wait()
     end
+    Deactivate()
+    winningItem = itemId
+    Activate()
     local targetItem = LootItemsDatabaseAPI.GetItemById(itemId or 1)
-    print(itemId, targetItem.name)
     local targetCard = lootCards[itemId]
     spinTargetPosition = targetCard.clientUserData.startPosition.y
-    print("We will land on " .. targetItem.name .. "  " .. targetItem.rarity.name)
     spinStartTime = time()
     Events.BroadcastToServer(LootItemsDatabaseAPI.Broadcasts.destroy, childObject.id)
 end

@@ -63,6 +63,9 @@ function PickItemRandomly(player)
     Task.Wait()
     newData.parent = NETWORKING
 
+    --#TODO Create string of randomized order
+
+
     Task.Spawn(
         function()
             if wonItem.muid then
@@ -75,5 +78,14 @@ function PickItemRandomly(player)
     )
 end
 
+function OnPlayerLeft(player)
+    for _, object in ipairs(NETWORKING:GetChildren()) do
+        if object.name == player.id and Object.IsValid(object) then
+            object:Destroy()
+        end
+    end
+end
+
 Events.ConnectForPlayer(LootItemsDatabaseAPI.Broadcasts.spin, PickItemRandomly)
 Events.ConnectForPlayer(LootItemsDatabaseAPI.Broadcasts.destroy, DestroyObject)
+Game.playerLeftEvent:Connect(OnPlayerLeft)

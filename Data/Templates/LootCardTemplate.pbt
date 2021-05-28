@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11512474634510021189
+        ParentId: 4781671109827199097
         ChildIds: 5638041414068837082
         UnregisteredParameters {
           Overrides {
@@ -40,6 +40,12 @@ Assets {
             Name: "cs:Border"
             ObjectReference {
               SubObjectId: 2718084433118800432
+            }
+          }
+          Overrides {
+            Name: "cs:Name"
+            ObjectReference {
+              SubObjectId: 1094872054472393295
             }
           }
         }
@@ -77,6 +83,8 @@ Assets {
         ChildIds: 8783069019403876811
         ChildIds: 1047623518569743366
         ChildIds: 2718084433118800432
+        ChildIds: 11294361053496610535
+        ChildIds: 1094872054472393295
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -242,6 +250,9 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -301,6 +312,9 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -360,11 +374,128 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
               LinearDamping: 0.01
             }
+          }
+        }
+      }
+      Objects {
+        Id: 11294361053496610535
+        Name: "Bar"
+        Transform {
+          Location {
+            X: 0.144958198
+            Z: 622.322571
+          }
+          Rotation {
+            Pitch: 6.83018879e-06
+            Yaw: -89.999939
+            Roll: -89.999939
+          }
+          Scale {
+            X: 10.3551855
+            Y: 1.03551018
+            Z: 10.3551855
+          }
+        }
+        ParentId: 5638041414068837082
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 13579516328657121992
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 16048367406070731799
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1094872054472393295
+        Name: "Item Name"
+        Transform {
+          Location {
+            X: -0.049275361
+            Y: -3.43239379
+            Z: 622.592102
+          }
+          Rotation {
+            Yaw: 180
+          }
+          Scale {
+            X: 2.90487289
+            Y: 2.90487289
+            Z: 2.90487289
+          }
+        }
+        ParentId: 5638041414068837082
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Text {
+          Text: "HELLO WORLD"
+          FontAsset {
+            Id: 7772724498665921819
+          }
+          Color {
+            R: 1
+            G: 1
+            B: 1
+            A: 1
+          }
+          HorizontalSize: 1
+          VerticalSize: 1
+          HorizontalAlignment {
+            Value: "mc:ecoretexthorizontalalign:center"
+          }
+          VerticalAlignment {
+            Value: "mc:ecoretextverticalalign:center"
           }
         }
       }
@@ -394,6 +525,15 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "fxma_opaque_emissive"
+      }
+    }
+    Assets {
+      Id: 7772724498665921819
+      Name: "Play Bold"
+      PlatformAssetType: 28
+      PrimaryAsset {
+        AssetType: "FontAssetRef"
+        AssetId: "PlayBold_ref"
       }
     }
     PrimaryAssetId {

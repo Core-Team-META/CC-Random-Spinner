@@ -18,6 +18,7 @@ Objects {
   ChildIds: 13703018238462919207
   ChildIds: 1822889584500709931
   ChildIds: 11507587875482557082
+  ChildIds: 6390698915805701507
   ChildIds: 69524702248805698
   ChildIds: 5815122490842238126
   Collidable_v2 {
@@ -58,9 +59,7 @@ Objects {
     Overrides {
       Name: "cs:Color"
       Color {
-        R: 1
-        G: 0.957616
-        B: 0.36
+        R: 0.85
         A: 1
       }
     }
@@ -129,6 +128,50 @@ Objects {
   }
 }
 Objects {
+  Id: 6390698915805701507
+  Name: "Epic"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1462092173272004180
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Color"
+      Color {
+        R: 0.907285213
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 11507587875482557082
+    SubobjectId: 2739444950245922118
+    InstanceId: 17771080832798645400
+    TemplateId: 14767819289351633414
+  }
+}
+Objects {
   Id: 11507587875482557082
   Name: "Rare"
   Transform {
@@ -147,7 +190,8 @@ Objects {
     Overrides {
       Name: "cs:Color"
       Color {
-        R: 0.907285213
+        R: 0.0699999928
+        G: 0.131589293
         B: 1
         A: 1
       }
@@ -191,9 +235,9 @@ Objects {
     Overrides {
       Name: "cs:Color"
       Color {
-        R: 0.0699999928
-        G: 0.131589293
-        B: 1
+        R: 0.0600000024
+        G: 1
+        B: 0.159602761
         A: 1
       }
     }
@@ -236,9 +280,9 @@ Objects {
     Overrides {
       Name: "cs:Color"
       Color {
-        R: 0.0600000024
-        G: 1
-        B: 0.159602761
+        R: 0.402
+        G: 0.402
+        B: 0.402
         A: 1
       }
     }
@@ -281,10 +325,16 @@ Objects {
   ChildIds: 16490284211346344671
   ChildIds: 18043899592095658405
   ChildIds: 1701057616709612719
+  ChildIds: 3352308566165512542
   ChildIds: 9811130817545629988
   ChildIds: 16842221011505265634
+  ChildIds: 4602945638738574440
   ChildIds: 5214176529654905677
   ChildIds: 11675545062180919518
+  ChildIds: 5651642573134435124
+  ChildIds: 8019311349198630036
+  ChildIds: 11035104448735291876
+  ChildIds: 13855091391453304786
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -300,6 +350,250 @@ Objects {
   InstanceHistory {
     SelfId: 9169683292736877109
     SubobjectId: 14336680307333660137
+    InstanceId: 17771080832798645400
+    TemplateId: 14767819289351633414
+  }
+}
+Objects {
+  Id: 13855091391453304786
+  Name: "Uncommon AR"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9169683292736877109
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:GamePortal"
+      String: "4a5251/weapon-images"
+    }
+    Overrides {
+      Name: "cs:ScreenshotIndex"
+      Int: 1
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      ObjectReference {
+        SelfId: 1822889584500709931
+      }
+    }
+    Overrides {
+      Name: "cs:Chance"
+      Float: 5
+    }
+    Overrides {
+      Name: "cs:Template"
+      AssetReference {
+        Id: 12805933040746882766
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Cool Gun_1"
+  }
+  InstanceHistory {
+    SelfId: 8219657377845172806
+    SubobjectId: 14674216655756645786
+    InstanceId: 17771080832798645400
+    TemplateId: 14767819289351633414
+  }
+}
+Objects {
+  Id: 11035104448735291876
+  Name: "Uncommon SMG"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9169683292736877109
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:GamePortal"
+      String: "4a5251/weapon-images"
+    }
+    Overrides {
+      Name: "cs:ScreenshotIndex"
+      Int: 3
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      ObjectReference {
+        SelfId: 1822889584500709931
+      }
+    }
+    Overrides {
+      Name: "cs:Chance"
+      Float: 5
+    }
+    Overrides {
+      Name: "cs:Template"
+      AssetReference {
+        Id: 16379088562581717858
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Even Cooler Gun_1"
+  }
+  InstanceHistory {
+    SelfId: 18043899592095658405
+    SubobjectId: 4890789954066775673
+    InstanceId: 17771080832798645400
+    TemplateId: 14767819289351633414
+  }
+}
+Objects {
+  Id: 8019311349198630036
+  Name: "Uncommon Pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9169683292736877109
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:GamePortal"
+      String: "4a5251/weapon-images"
+    }
+    Overrides {
+      Name: "cs:ScreenshotIndex"
+      Int: 2
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      ObjectReference {
+        SelfId: 1822889584500709931
+      }
+    }
+    Overrides {
+      Name: "cs:Chance"
+      Float: 5
+    }
+    Overrides {
+      Name: "cs:Template"
+      AssetReference {
+        Id: 1290255423603379536
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Another Cool Gun_1"
+  }
+  InstanceHistory {
+    SelfId: 16490284211346344671
+    SubobjectId: 6732352053841462531
+    InstanceId: 17771080832798645400
+    TemplateId: 14767819289351633414
+  }
+}
+Objects {
+  Id: 5651642573134435124
+  Name: "Uncommon Sniper"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9169683292736877109
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:GamePortal"
+      String: "4a5251/weapon-images"
+    }
+    Overrides {
+      Name: "cs:ScreenshotIndex"
+      Int: 4
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      ObjectReference {
+        SelfId: 1822889584500709931
+      }
+    }
+    Overrides {
+      Name: "cs:Chance"
+      Float: 5
+    }
+    Overrides {
+      Name: "cs:Template"
+      AssetReference {
+        Id: 9959992518672539876
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Super Cool Gun_1"
+  }
+  InstanceHistory {
+    SelfId: 1701057616709612719
+    SubobjectId: 12550408989901159283
     InstanceId: 17771080832798645400
     TemplateId: 14767819289351633414
   }
@@ -427,6 +721,67 @@ Objects {
   }
 }
 Objects {
+  Id: 4602945638738574440
+  Name: "Epic AR"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9169683292736877109
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:GamePortal"
+      String: "4a5251/weapon-images"
+    }
+    Overrides {
+      Name: "cs:ScreenshotIndex"
+      Int: 1
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      ObjectReference {
+        SelfId: 6390698915805701507
+      }
+    }
+    Overrides {
+      Name: "cs:Chance"
+      Float: 3
+    }
+    Overrides {
+      Name: "cs:Template"
+      AssetReference {
+        Id: 12805933040746882766
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Another Cool Gun"
+  }
+  InstanceHistory {
+    SelfId: 16842221011505265634
+    SubobjectId: 5768207729407276094
+    InstanceId: 17771080832798645400
+    TemplateId: 14767819289351633414
+  }
+}
+Objects {
   Id: 16842221011505265634
   Name: "Rare AR"
   Transform {
@@ -478,7 +833,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Another Cool Gun"
+    FilePartitionName: "Rare AR"
   }
   InstanceHistory {
     SelfId: 16842221011505265634
@@ -549,6 +904,67 @@ Objects {
   }
 }
 Objects {
+  Id: 3352308566165512542
+  Name: "Epic Sniper"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9169683292736877109
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:GamePortal"
+      String: "4a5251/weapon-images"
+    }
+    Overrides {
+      Name: "cs:ScreenshotIndex"
+      Int: 4
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      ObjectReference {
+        SelfId: 6390698915805701507
+      }
+    }
+    Overrides {
+      Name: "cs:Chance"
+      Float: 5
+    }
+    Overrides {
+      Name: "cs:Template"
+      AssetReference {
+        Id: 9959992518672539876
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Epic Sniper"
+  }
+  InstanceHistory {
+    SelfId: 1701057616709612719
+    SubobjectId: 12550408989901159283
+    InstanceId: 17771080832798645400
+    TemplateId: 14767819289351633414
+  }
+}
+Objects {
   Id: 1701057616709612719
   Name: "Basic Sniper"
   Transform {
@@ -600,7 +1016,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Super Cool Gun_1"
+    FilePartitionName: "Basic Sniper"
   }
   InstanceHistory {
     SelfId: 1701057616709612719
@@ -661,7 +1077,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Even Cooler Gun_1"
+    FilePartitionName: "Basic SMG"
   }
   InstanceHistory {
     SelfId: 18043899592095658405
@@ -722,7 +1138,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Another Cool Gun_1"
+    FilePartitionName: "Basic Pistol"
   }
   InstanceHistory {
     SelfId: 16490284211346344671
@@ -783,7 +1199,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Cool Gun_1"
+    FilePartitionName: "Basic AR"
   }
   InstanceHistory {
     SelfId: 8219657377845172806
