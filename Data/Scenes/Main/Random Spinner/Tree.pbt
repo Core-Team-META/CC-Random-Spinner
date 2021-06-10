@@ -1,6 +1,39 @@
 Name: "Random Spinner"
 RootId: 17797198791261122129
 Objects {
+  Id: 4691755433834491666
+  Name: "RandomSpinner_Readme"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17797198791261122129
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 18026888643219579007
+    }
+  }
+}
+Objects {
   Id: 11239511154039978119
   Name: "LootCardsScreen"
   Transform {
@@ -78,6 +111,7 @@ Objects {
       ContentType {
         Value: "mc:ecanvascontenttype:dynamic"
       }
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
