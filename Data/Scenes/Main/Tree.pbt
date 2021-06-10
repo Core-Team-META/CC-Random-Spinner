@@ -19,7 +19,8 @@ Objects {
   ChildIds: 14713340454944924967
   ChildIds: 10005074784157121906
   ChildIds: 14982843161775482339
-  ChildIds: 17797198791261122129
+  ChildIds: 4691755433834491666
+  ChildIds: 17771080832798645400
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -35,13 +36,60 @@ Objects {
   }
 }
 Objects {
-  Id: 17797198791261122129
+  Id: 17771080832798645400
   Name: "Random Spinner"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5713667807401402765
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Random Spinner"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 94
+            Y: -37150
+            Z: 476
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14767819289351633414
+    }
+  }
+}
+Objects {
+  Id: 4691755433834491666
+  Name: "RandomSpinner_Readme"
   Transform {
     Location {
       X: 94
       Y: -37150
       Z: 476
+    }
+    Rotation {
     }
     Scale {
       X: 1
@@ -62,16 +110,10 @@ Objects {
   EditorIndicatorVisibility {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Random Spinner"
-  }
-  InstanceHistory {
-    SelfId: 17797198791261122129
-    SubobjectId: 5713667807401402765
-    InstanceId: 17771080832798645400
-    TemplateId: 14767819289351633414
-    WasRoot: true
+  Script {
+    ScriptAsset {
+      Id: 18026888643219579007
+    }
   }
 }
 Objects {

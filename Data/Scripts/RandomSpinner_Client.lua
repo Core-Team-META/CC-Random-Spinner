@@ -1,5 +1,37 @@
+--[[
+Copyright 2021 Manticore Games, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+--]]
+
+------------------------------------------------------------------------------------------------------------------------
+-- Random Spinner Client
+-- Authors 
+--      Divided (META) - (https://www.coregames.com/user/eaba4947069846dbb72fc5efb0f04f47)
+--      Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
+-- Date: 2021/6/10
+-- Version 0.0.1
+------------------------------------------------------------------------------------------------------------------------
+-- REQUIRES
+------------------------------------------------------------------------------------------------------------------------
+
 local LootItemsDatabaseAPI = require(script:GetCustomProperty("LootItemsDatabaseAPI"))
 
+------------------------------------------------------------------------------------------------------------------------
+-- OBJECTS
+------------------------------------------------------------------------------------------------------------------------
+
+local LOCAL_PLAYER = Game.GetLocalPlayer()
 local ROOT = script:GetCustomProperty("ROOT"):WaitForObject()
 local NETWORKING = script:GetCustomProperty("Networking"):WaitForObject()
 local SCREEN_GROUP = script:GetCustomProperty("ScreenGroup"):WaitForObject()
@@ -8,14 +40,23 @@ local UI_CONTAINER = script:GetCustomProperty("UIContainer"):WaitForObject()
 local LOOT_CARD_TEMPLATE = script:GetCustomProperty("LootCardTemplate")
 local SPIN_BUTTON = script:GetCustomProperty("SpinButton"):WaitForObject()
 local SETTINGS = script:GetCustomProperty("Settings"):WaitForObject()
+
+------------------------------------------------------------------------------------------------------------------------
+-- CUSTOM PROPERTIES
+------------------------------------------------------------------------------------------------------------------------
+
 local spinDuration = SETTINGS:GetCustomProperty("SpinDuration") or 1
 
 if spinDuration < 1 then
     spinDuration = 1
     warn("Spin Duration must be great than 1")
 end
+
+------------------------------------------------------------------------------------------------------------------------
+-- LOCAL VARIABLES
+------------------------------------------------------------------------------------------------------------------------
+
 local items = LootItemsDatabaseAPI.GetItems()
-local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 -----------------------------
 
@@ -38,6 +79,11 @@ local spinTargetPosition = 0
 local spinDistance = 50000
 local spinStartTime = 0
 local winningItem = nil
+
+
+------------------------------------------------------------------------------------------------------------------------
+-- GLOBAL FUNCTIONS
+------------------------------------------------------------------------------------------------------------------------
 
 function Activate()
     local position = Vector3.ZERO
@@ -200,6 +246,10 @@ function OnNetworkObjectAdded(parentObject, childObject)
     spinStartTime = time()
     Events.BroadcastToServer(LootItemsDatabaseAPI.Broadcasts.destroy, childObject.id)
 end
+
+------------------------------------------------------------------------------------------------------------------------
+-- LISTENERS
+------------------------------------------------------------------------------------------------------------------------
 
 NETWORKING.childAddedEvent:Connect(OnNetworkObjectAdded)
 

@@ -1,11 +1,12 @@
 --[[
    Meta Random Spinner - README
-   v0.1.0 - 2021/5/27
+   v0.1.0 - 2021/6/10
 
    Contributors:
    =============
       Divided (META) (https://www.coregames.com/user/eaba4947069846dbb72fc5efb0f04f47)
       Morticai (META) (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
+
 
    Description:
    ============
@@ -13,11 +14,17 @@
       Items can be set to different rarities and creators have full control of the odds of getting a certain rarity.
 
 
+   Setup:
+   ======
+
+   Drop the Random Spinner component into your heirarchy to get started.
+
    Getting an Image
    ================
       1. Images can be created by taking a screenshot of the 3d object inside of Core.
       2. Once you are happy with the framing of your object take a screen shot by hitting ALT + Print Screen.
       3. Open MS Paint and paste your screen shot image. Save the image to a folder that you can access later.
+
 
    Publish the Image
    =================
@@ -29,6 +36,7 @@
       6. Once the "Success" window appears, click on the "Copy Link" button. Paste this game link somewhere so you don't lose it!
       7. You should have a link such as: https://www.coregames.com/games/1b3aa6/meta-portal-image-examples
       8. You will only need the Game ID portion which is: 1b3aa6/meta-portal-image-examples
+
 
    Setup Item Images
    =====================
@@ -51,8 +59,7 @@
       6. Renaming a rairty is as simple as renaming the object for example renaming "Common" to "Test1" will make all items be listed 
       as Test1 rarity.
 
-
-   
+      
    Setting An Item Drop Chance
    ===========================
       1. If you skipped ahead read "Setup Item Images" and "Setting An Item Rarity" and continue from step 4.
